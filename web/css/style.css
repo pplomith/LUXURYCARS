@@ -1,0 +1,118 @@
+body {
+    background-color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+
+    position: absolute;
+    height: 70px;
+    background-color: black;
+    width: 100%;
+    top: 0px;
+}
+
+.down {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    background-color: #ff9400;
+    font-size: 12px;
+    font-family: Arial;
+    color: white;
+    bottom: 0px;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+p {
+    padding-top: 40px;
+}
+
+.internalField {
+
+    margin: 10px auto auto auto;
+}
+
+h2 {
+
+    font-family: Impact;
+    letter-spacing: 0.150em;
+    text-align: center;
+    font-size: 50px;
+    margin: 150px auto 0px auto;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ff9400;
+}
+
+
+.field_reg {
+
+    background-color: #efefef;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 5px;
+    font-family: Impact;
+    letter-spacing: 0.150em;
+    text-align: center;
+    width: 400px;
+    height: 375px;
+    margin: 30px auto 0px auto;
+}
+.field_login{
+
+    background-color: #efefef;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 5px;
+    font-family: Impact;
+    letter-spacing: 0.150em;
+    text-align: center;
+    width: 400px;
+    height: 230px;
+    margin: 30px auto 0px auto;
+ }
+.internal {
+
+    border: 2px groove;
+    border-radius: 5px;
+}
+
+.register_button,.register_button_login{
+    border: none;
+    height: 33px;
+    width: 235px;
+    color: #efefef;
+    background-color: #ff9400;
+}
+.register_button:hover,.register_button_login:hover{
+    background-color: #ff7700;
+}
+
+input.style_1{
+    line-height: 30px;
+    background: #fafafa;
+    border-radius: 5px;
+    border-bottom-style: solid;
+    border-top-color: black;
+    border-right-style: none;
+    border-top-style: none;
+    border-left-style: none;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.div_log_reg{
+    background-color: black;
+    width: 233px;
+    height: 2px;
+    margin-left: 83px;
+}

@@ -1,0 +1,157 @@
+* {
+
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.container {
+
+	width: 80%;
+	margin: 0 auto;
+}
+
+footer {
+
+	height: 20px;
+	padding-top: 10px;
+}
+
+header::after {
+
+	display: table;
+	clear: both;
+}
+
+nav {
+
+	padding-left: 28%;
+
+}
+
+nav ul {
+
+	margin: 0; 
+	padding: 0;
+}
+
+nav li {
+
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 23px;
+	padding-bottom: 23px;
+
+	position: relative;
+}
+
+nav a::before {
+
+	display: block;
+	height: 5px;
+
+	position: absolute;
+	bottom: 0px;
+	width: 0%;
+
+	transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+
+	width: 100%;
+}
+
+
+.hero {
+
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	position: absolute;
+}
+
+.form-box {
+
+	width: 380px;
+	height: 480px;
+	position: relative;
+	margin: 8% auto;
+	padding: 5px;
+}
+
+.button-box {
+
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+}
+
+.toggle-btn {
+
+	padding: 10px 30px;
+	position: relative;
+	border: 0;
+}
+
+#btn {
+
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+}
+
+.input-group {
+
+	top: 0;
+	position: absolute;
+	width: 280px;
+}
+
+.input-field {
+
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+}
+
+.submit-btn {
+
+	width: 85%;
+	padding: 10px 30px;
+	display: block;
+	margin: auto;
+	border: 0;
+}
+
+.check-box {
+
+	margin: 30px 10px 30px 0;
+}
+
+.span {
+
+	bottom: 68px;
+	position: absolute;
+}
+
+#login {
+
+	top: 145px;
+	left: 50px;
+}
+
+#register {
+
+	top: 120px;
+	left: 450px;
+}
+
+
+
+
+
+
+
