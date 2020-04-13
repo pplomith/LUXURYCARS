@@ -10,28 +10,14 @@
 <head>
     <meta charset="UTF-8">
     <link href = "./css/style_homepage.css" type = "text/css" rel = "stylesheet" />
-    <link href="./css/nav_structure.css" type="text/css" rel="stylesheet"/>
+    <link href = "./css/nav_structure.css" type="text/css" rel="stylesheet"/>
     <link href = "https://fonts.googleapis.com/css?family=Poppins" rel = "stylesheet">
     <script src = "https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Our site</title>
 </head>
 <body onload = "LoadRandomBackground(); StartBackgroundRefreshTimer()">
 
-<%--<nav class="nav_homepage">--%>
-<%--    <input type="checkbox" id="check" name="checkbox" onclick="MostraTable('auto')">--%>
-<%--    <label for="check" class="checkbtn">--%>
-<%--        <i class="fas fa-bars"></i>--%>
-<%--    </label>--%>
-<%--    <label class="logo">LUXURY</label>--%>
-<%--    <ul>--%>
-<%--        <li><a class="active" href="#">Home</a></li>--%>
-<%--        <li><a href="#">About</a></li>--%>
-<%--        <li><a href="#">Services</a></li>--%>
-<%--        <li><a href="#">Contact</a></li>--%>
-<%--        <li><a href="login.html"><i class="fa fa-user"></i> </a></li>--%>
-<%--    </ul>--%>
-<%--</nav>--%>
-<%@ include file="WEB-INF/results/header.jsp"%>
+<%@ include file="WEB-INF/results/header_home.jsp"%>
 <table id="auto" name="auto">
     <tr>
         <td></td>
