@@ -1,267 +1,478 @@
+/* Stile della pagina */
 * {
-
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; /*width e height calcolati in base all'elemento in cui si trova il div*/
 }
 
+/* Stile div che contiene la navbar */
 .container {
 
-	width: 80%;
-	margin: 0 auto;
+    width: 80%;
+    margin: 0 auto;
+
 }
 
-footer {
-	
-	position: absolute;
-	background-color: black;
-	height: 20px;
-	text-align: center;
-	color: #daa520;
-	padding-top: 10px;
-	bottom: 0;
-
-	width: 100%;
-}
-
+/* Stile header */
 header {
 
-	background-color: black;
+    z-index: 10; /*sovrapposizione sugli elementi*/
+    background-color: black;
 }
 
+/* Aggiunge qualcosa dopo l'elemento selezionato */
 header::after {
 
-	content: '';
-	display: table;
-	clear: both;
+    content: '';
+    display: table;
+    clear: both; /*La clearproprietà specifica su quali lati di un elemento gli elementi mobili non possono fluttuare.*/
 }
 
+/* Stile navbar */
 nav {
 
-	font-family: 'Poppins', sans-serif;
-	background-color: black;
-	height: 80px;
-	width: 112%;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    height: 80px;
+    width: 112%;
+
 }
 
 
 nav ul {
 
-	margin-top: 0;
-	padding: 0;
-	list-style: none;
-	float: right;
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
 }
 
 nav li {
 
-	display: inline-block;
-	margin-left: 60px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+    display: inline-block;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
-	margin-top: 0;
-	margin-top: 0;
-	margin-left: 33px;
-	margin-right: 32px;
+    margin-top: 0;
+    margin-left: 23px;
+    margin-right: 22px;
 
-	position: relative;
+    position: relative;
 }
 
 nav a {
 
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
+/* Stile button della nav bar */
 nav button:hover {
 
-	color: #daa520;
+    color: #daa520;
 }
 
 nav button::before {
 
-	content: '';
-	display: block;
-	height: 5px;
-	background-color: #daa520;
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #daa520;
 
-	position: absolute;
-	bottom: 0;
-	width: 0%;
+    position: absolute;
+    bottom: 0;
+    width: 0;
 
-	transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
 }
 
 nav button:hover::before {
 
-	width: 100%;
+    width: 100%;
 }
 
-body {
 
-	background-color: black;
-}
-
+/* Stile nome sito */
 label.logo {
 
-	float: left;
-	position: absolute;
+    float: left;
+    position: absolute;
 
-	padding-left: 0px;
-	color: white;
-	font-size: 35px;
-	line-height: 80px;
-	margin-right: 300px;
-	margin-left: 0;
-	font-weight: bold;
+    padding-left: 0;
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    margin-right: 300px;
+    margin-left: 0;
+    font-weight: bold;
 }
 
+/* Icon visibile dopo un determinato breakpoint (per responsive) */
 .checkbtn {
 
-	font-size: 30px;
-	color: white;
-	float: right;
-	line-height: 80px;
-	margin-right: 40px;
-	cursor: pointer;
-	display: none;
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
 
 .nav-btn {
 
-	color: white;
-	background-color: black;
-	font-size: 17px;
-	border-radius: 3px;
-	text-transform: uppercase;
-	border: none;
-	outline: none;
+    color: white;
+    background-color: black;
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+
 }
 
 #check {
 
-	display: none;
-}
-
-@media (max-width: 952px) {
-
-	label.logo {
-
-		padding-top: 0%;
-	}
-
-	.nav-button {
-
-		font-size: 10px;
-	}
-
-	footer {
-
-		width: 100%;
-		position: absolute;
-	}
-}
-
-@media (max-width: 920px) {
-
-	label.logo {
-
-		margin-top: 0;
-		padding-top: 0%;
-		position: absolute;
-	}
-
-	.checkbtn {
-
-		display: block;
-	}
-
-	ul {
-
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		top: 80px;
-		left: -100%;
-		text-align: center;
-		overflow-y: scroll;
-
-		-webkit-overflow-scrolling: touch;
-
-		background-color: black;
-	}
-
-	nav ul li {
-
-		display: block;
-		margin: 50px 0;
-		line-height: 30px;
-	}
-
-	#btn-h:hover::before {
-
-		width: 63px;
-	}
-
-	#btn-a:hover::before {
-
-		width: 70px;
-	}
-
-	#btn-c:hover::before {
-
-		width: 98px;
-	}
-
-	#btn-s:hover::before {
-
-		width: 105px;
-	}
-
-	.nav-btn {
-
-		font-size: 20px;
-	}
-
-	#check:checked ~ ul {
-		
-		left: 0;
-	}
-
-	footer {
-
-		display: none;
-	}
+    display: none;
 }
 
 a {
 
-	text-decoration: none;
-	color: white;
+    text-decoration: none;
+    color: white;
+}
+/********************* nav end ******/
+
+
+/********* media query ********/
+@media (max-width: 952px) {
+
+    label.logo {
+        font-size: 30px;
+        padding-top: 0;
+    }
+
+    .nav-button {
+
+        font-size: 10px;
+    }
+
+}
+
+/* Nav bar con il check_btn (icona con 3 barre orizzontali)*/
+@media (max-width: 920px) {
+    header{
+        position: -webkit-sticky;
+        position: sticky; /*header 'appiccicoso'*/
+        top: 0;
+        z-index: 10;
+    }
+    label.logo {
+
+        margin-top: 0;
+        padding-top: 0;
+        position: absolute;
+    }
+
+    .checkbtn {
+
+        display: block;
+    }
+
+    ul {
+
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        overflow-y: scroll;
+
+        -webkit-overflow-scrolling: touch;
+
+        background-color: black;
+    }
+
+    nav ul li {
+
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #btn-h:hover::before {
+
+        width: 63px;
+    }
+
+    #btn-s:hover::before {
+
+        width: 25px;
+    }
+
+    #btn-l:hover::before {
+
+        width: 20px;
+    }
+
+    .nav-btn {
+
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul {
+
+        left: 0;
+    }
+
 }
 
 
+/****Media Query Smartphone****/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait){
+    header{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    label.logo {
+
+        margin-top: 0;
+        padding-top: 0;
+        position: absolute;
+    }
+
+    .checkbtn {
+
+        display: block;
+    }
+
+    ul {
+
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        overflow-y: scroll;
+
+        -webkit-overflow-scrolling: touch;
+
+        background-color: black;
+    }
+
+    nav ul li {
+
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #btn-h:hover::before {
+
+        width: 63px;
+    }
+
+    #btn-s:hover::before {
+
+        width: 25px;
+    }
+
+    #btn-l:hover::before {
+
+        width: 20px;
+    }
+
+    .nav-btn {
+
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul {
+
+        left: 0;
+    }
+
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 4)
+and (orientation: portrait){
+    header{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    label.logo {
+
+        margin-top: 0;
+        padding-top: 0;
+        position: absolute;
+    }
+
+    .checkbtn {
+
+        display: block;
+    }
+
+    ul {
+
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        overflow-y: scroll;
+
+        /*
+            -webkit-overflow-scrolling: touch, la barra dello scrolling, touch serve per dire che la barra si crea quando
+            l'utente tocca lo schermo
+        */
+        -webkit-overflow-scrolling: touch;
+
+        background-color: black;
+    }
+
+    nav ul li {
+
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #btn-h:hover::before {
+
+        width: 63px;
+    }
+
+    #btn-s:hover::before {
+
+        width: 25px;
+    }
+
+    #btn-l:hover::before {
+
+        width: 20px;
+    }
+
+    .nav-btn {
+
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul {
+
+        left: 0;
+    }
+
+}
 
 
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait){
+
+    header{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    label.logo {
+
+        margin-top: 0;
+        padding-top: 0%;
+        position: absolute;
+    }
+
+    .checkbtn {
+
+        display: block;
+    }
+
+    ul {
+
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        overflow-y: scroll;
+
+        -webkit-overflow-scrolling: touch;
+
+        background-color: black;
+    }
+
+    nav ul li {
+
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #btn-h:hover::before {
+
+        width: 63px;
+    }
 
 
+    #btn-s:hover::before {
 
+        width: 25px;
+    }
 
+    #btn-l:hover::before {
 
+        width: 20px;
+    }
 
+    .nav-btn {
 
+        font-size: 20px;
+    }
 
+    #check:checked ~ ul {
 
+        left: 0;
+    }
 
+}
 
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
 
+    label.logo {
 
+        padding-top: 0;
+    }
 
+    .nav-button {
 
-
-
-
+        font-size: 10px;
+    }
+}
 

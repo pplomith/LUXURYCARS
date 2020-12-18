@@ -1,181 +1,58 @@
+/* Stile della pagina */
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
+    box-sizing: border-box; /*width e height calcolati in base all'elemento in cui si trova il div*/
 }
 
 body {
 
-    background-color: #daa520;
-}
-
-nav {
-
-    font-family: 'Poppins', sans-serif;
     background-color: black;
-    height: 80px;
-    width: 100%;
 }
 
-label.logo {
-    
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-}
-
-nav ul {
-    
-    float: right;
-    margin-right: 20px;
-}
-
-nav ul li {
-    
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-    position:relative;
-}
-
-nav ul li a { 
-    
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-nav ul li a::before {
-    
-    display: block;
-    height: 5px;
-    position: absolute;
-    bottom: 0px;
-    width: 0%;
-    transition: all ease-in-out 250ms;
-}
-
-nav ul li a:hover::before {
-    
-    width: 100%;
-}
-
-nav a:hover{
-    
-    color: #daa520;
-}
-
-nav a::before{
-
-    content: '';
-    background-color: #daa520;
-    transition: all ease-in-out 250ms;
-}
-
-.checkbtn {
-
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check {
-
-    display: none;
-}
-
-@media (max-width: 952px){
-    
-    label.logo{
-        
-        font-size: 30px;
-        padding-left: 50px;
-        padding-top: 30px;
-    }
-    
-    nav ul li a {
-        
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 858px){
-    
-    .checkbtn {
-        
-        display: block;
-    }
-
-
-    ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background-color: black;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        /*transition: all .5s;*/
-        overflow-y: scroll;
-        -webkit-overflow-scrolling:touch;
-    }
-
-    nav ul li {
-        
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    nav ul li a{
-        font-size: 20px;
-    }
-    /*     a:hover{
-            background: none;
-            color: #0082e6;
-        } */
-    #check:checked ~ ul{
-        left: 0;
-    }
-
-}
-
+/* Stile degli hyperlink */
 a {
+
     text-decoration: none;
     color: white;
 }
 
+div.table1{
+
+    display: block;
+}
+
+div.table2{
+
+    display: none;
+}
+
+/* Stile tabelle */
 table {
-    
+
     position: absolute;
     border-collapse: separate;
     border-spacing: 3px 3px;
     width: 100%;
-    bottom:0px;
+    bottom:0;
     height:33.3333%;
 }
 
+/* celle tabelle */
 td {
+
     color: white;
     background-color: rgba(0,0,0,.80);
     padding: 8px;
     text-align: center;
     width: 100px;
     height: 10px;
-
 }
 
+/* button con padre un td */
 td > button {
 
     background-color: rgba(0, 0, 0, 0);
@@ -185,8 +62,9 @@ td > button {
     cursor: pointer;
 }
 
+/* Cella :hover diventa BGC: bianca e text-color del button: black */
 td:hover{
-    
+
     background-color: white;
 }
 
@@ -194,4 +72,77 @@ td:hover > button {
 
     background-color: white;
     color: black;
+}
+
+button{
+
+    outline: none;
+}
+
+
+/* Media query */
+/* portrait */
+@media (max-width: 858px) {
+
+    div.table1 {
+        display: none;
+    }
+
+    div.table2 {
+        display: block;
+    }
+}
+
+
+/***Media query SmartPhone***/
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+    div.table1 {
+
+        display: none;
+    }
+
+    div.table2 {
+
+        display: block;
+    }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 4)
+and (orientation: portrait) {
+
+    div.table1 {
+
+        display: none;
+    }
+
+    div.table2 {
+
+        display: block;
+    }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+    div.table1 {
+
+        display: none;
+    }
+
+    div.table2 {
+
+        display: block;
+    }
 }

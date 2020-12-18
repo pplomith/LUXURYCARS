@@ -1,0 +1,243 @@
+/* stile della pagina */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+
+}
+
+.footer-distributed{
+    margin-top: 20%;
+}
+
+/* stile del div contenente il carrello */
+.wrap{
+
+    max-width: 70%;
+    margin: 3% 15%;
+
+}
+
+.wrap h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.carrello{
+    width: 100%;
+    margin-top: 4%;
+}
+
+/* Stile degli elementi del carrello */
+.order-info {
+    padding-left:25px;
+    padding-right:25px;
+    box-sizing:border-box; /*width e height calcolati in base all'elemento in cui si trova il div*/
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+.price {
+    bottom:0;
+    position:absolute;
+    right:0;
+    color:#4488dd;
+}
+
+
+/* stile della tabella contenente informazioni degli elementi */
+.order-table td:first-of-type {
+    width:25%;
+}
+.order-table {
+
+    position:relative;
+}
+.line {
+    height:1px;
+    width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    background:#ddd;
+}
+.order-table td:last-of-type {
+    vertical-align:top;
+    padding-left:25px;
+}
+.order-info-content {
+    table-layout:fixed;
+
+}
+
+.full-width {
+    width:100%;
+}
+.total {
+
+    font-family: 'Poppins', sans-serif;
+    margin-top:25px;
+    font-size:20px;
+    position:absolute;
+    right:27px;
+    left:35px;
+}
+
+/* stile button */
+.button{
+    width: 100%;
+    float: left;
+    margin-top: 100px;
+    position: absolute;
+}
+.btn{
+
+    position: absolute;
+    right: 0;
+    display: block;
+    float: right;
+    width: 20%;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    outline: none;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;  /* calcola l'altezza in base a due parametri */
+}
+
+.btn_remove{
+
+    position: absolute;
+    right: 0;
+    display: block;
+    float: right;
+    width: 100px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    outline: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize; /*prima lettera in maiuscolo*/
+    height: 30px;
+
+}
+.btn_remove:hover{
+    background-color: #FF3030;
+    color: white;
+}
+.quantity{
+
+    outline: none;
+    position: absolute;
+    display: block;
+    float:left;
+    width: 100px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: 30px;
+    border-radius:5px;
+    right: 120px;
+}
+
+.btn_back, .btn_back1{
+
+    position: absolute;
+    left: 0;
+    display: block;
+    float: right;
+    width: 20%;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    outline: none;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important; /* calcola l'altezza in base a due parametri */
+
+}
+
+.btn:hover, .btn_back:hover, .btn_back1:hover{
+    background-color: #daa520;
+    background-color: rgba(225, 162, 0, 0.71);
+}
+
+.dense {
+
+    line-height:1.2em;
+    font-size:1rem;
+}
+
+
+/* media query */
+@media (max-width: 720px) {
+    .wrap {
+        width: 100%;
+        height: 100%;
+        display:block;
+        border-radius:0;
+    }
+    .order-info {
+        width:100%;
+        height:auto;
+        padding-bottom:100px;
+        border-radius:0;
+    }
+    .btn_back, .btn{
+        width: 30%;
+    }
+}
+
+@media (max-width: 900px){
+
+    .btn_remove{
+        width: 70px;
+        height: 22px;
+        font-size: 10px;
+    }
+
+    .quantity{
+        width: 60px;
+        height: 22px;
+    }
+}
+@media (max-width: 1100px) {
+    .btn_remove{
+        width: 70px;
+        height: 22px;
+        font-size: 10px;
+    }
+    .quantity{
+        width: 60px;
+        height: 22px;
+    }
+    .order-info {
+        width:100%;
+        height:auto;
+        padding-bottom:120px;
+        border-radius:0;
+    }
+    .footer-distributed{
+        margin-top: 15%;
+    }
+
+}

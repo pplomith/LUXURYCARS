@@ -1,0 +1,246 @@
+/* Stile di tutta la pagina */
+*{
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stile modifica del footer */
+.footer-distributed{
+    margin-top: 10%;
+}
+
+/* Stile div filtri */
+.filter{
+    margin-bottom: 150px;
+}
+.search-sec{
+    padding: 2rem;
+    position: relative;
+    margin-top: 5px;
+
+}
+.search-slt, .wrn-btn {
+    display: block;
+    float:left;
+    width: 20%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:5px;
+    outline: none;
+}
+
+.wrn-btn{
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+
+}
+.wrn-btn:hover{
+    background-color: #daa520;
+    background-color: rgba(225, 162, 0, 0.71);
+}
+/*Filter end*/
+
+body{
+
+    font-family: 'Quicksand', serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+/* stile div vista auto */
+.wrap{
+
+    max-width: 70%;
+    margin: 3% 15%;
+}
+.wrap div h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.wrap div img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle; /* L'elemento è allineato con l'elemento più basso sulla linea */
+}
+
+.wrap div .btn {
+
+    color: black;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    outline: none;
+}
+
+.wrap div .btn:hover {
+    background-color: #daa520;
+}
+
+/* stile delle card auto singole */
+div.card{
+
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    width: 250px;
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    overflow: hidden;
+    float: left;
+    padding: 0;
+}
+
+.card_content{
+    width: 100%;
+    padding: 1rem;
+    background: white;
+
+}
+.card_title {
+
+    text-align: center;
+    color: #daa520;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.card_text {
+    text-align: center;
+    padding-top: 9px;
+    color: #daa520;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    height: 40px;
+    font-weight: 800;
+}
+
+
+
+
+/* Media query */
+
+@media all and (max-width: 920px) {
+    .search-slt, .wrn-btn{
+        float: none;
+        width: 100%;
+    }
+    .wrap div.card {
+        width: 40%;
+
+    }
+}
+
+@media all and (max-width: 700px) {
+
+    .card_text{
+        font-size: 26px;
+    }
+    .card_title{
+        font-size: 36px;
+    }
+    .wrap div.card {
+        width: 100%;
+        float: none;
+    }
+
+}
+
+
+
+/* smartphone */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    .card-image{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-slt, .wrn-btn{
+        float: none;
+        width: 100%;
+    }
+    .wrap div.card {
+        width: 100%;
+        float: none;
+    }
+    .card_text{
+        font-size: 26px;
+    }
+    .card_title{
+        font-size: 26px;
+    }
+}
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 4)
+and (orientation: portrait) {
+    .card-image{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-slt, .wrn-btn{
+        float: none;
+        width: 100%;
+    }
+    .wrap div.card {
+        width: 100%;
+        float: none;
+    }
+    .card_text{
+        font-size: 26px;
+    }
+    .card_title{
+        font-size: 36px;
+    }
+}
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 860px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+    .card-image{
+        margin-left: auto;
+    margin-right: auto;
+    }
+    .search-slt, .wrn-btn{
+        float: none;
+        width: 100%;
+    }
+    .wrap div.card {
+        width: 100%;
+        float: none;
+    }
+    .card_text{
+        font-size: 26px;
+    }
+    .card_title{
+        font-size: 36px;
+    }
+}
