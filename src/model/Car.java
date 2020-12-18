@@ -1,5 +1,8 @@
 package model;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Car {
 
     public String getNome() {
@@ -103,14 +106,21 @@ public class Car {
         this.accelerazione = accelerazione;
     }
 
-    public double getPrezzo() {
+    public String getPrezzo() {
 
         return prezzo;
     }
 
     public void setPrezzo(double prezzo) {
 
-        this.prezzo = prezzo;
+        this.prezzoDouble = prezzo;
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.ITALY);
+        this.prezzo = currencyFormatter.format(prezzo);
+    }
+
+    public double getPrezzoDouble(){
+
+        return this.prezzoDouble;
     }
 
     public int getPorte() {
@@ -214,7 +224,18 @@ public class Car {
         this.kW = kW;
     }
 
-    private String nome, casaAuto, alimentazione, trasmissione, categoria, trazione;
-    private double lunghezza, larghezza, altezza, accelerazione, prezzo;
+    public String getPath() {
+
+        return path;
+    }
+
+    public void setPath(String directory, String specifico, String estensione) {
+
+        path = directory + nome.toLowerCase().replaceAll(" ", "") +
+                specifico.toLowerCase() + estensione;
+    }
+    private double prezzoDouble;
+    private String nome, casaAuto, alimentazione, trasmissione, categoria, trazione, path, prezzo;
+    private double lunghezza, larghezza, altezza, accelerazione;
     private int porte, posti, peso, cilindri, cilindrata, potenza, rapporti, velMax, emissioneCO2, kW;
 }
