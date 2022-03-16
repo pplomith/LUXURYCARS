@@ -1,8 +1,3 @@
 # LUXURYCARS
-Project LUXURYCARS -> E-Commerce for luxury cars.
-Users can view different types or brands of cars and can purchase them.
-
-There are three sections, MODEL - CONTROLLER - VIEW.
-Model: composed of DAO and Entity (persistent data).
-Controller: are the servlets that handle HTTP requests.
-View: set of jsp used for User Experience.
+LuxuryCars is a web e-commerce that allows the car salesman to create a catalog and sell expensive cars.
+The first web app developed as students in the web software technologies course.
